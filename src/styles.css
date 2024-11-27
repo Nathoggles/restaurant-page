@@ -3,6 +3,9 @@
     --secondColor: #ffa952;
     --bulletColor:#ef5a5a;
     --fontColor: #feffdf;
+
+    font-family: "Caveat", "Handlee", system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    --base-size: clamp(1rem, 1rem + 0.8vw, 3.2rem);
 }
 .allContainer {
     height: 100vh;
@@ -12,6 +15,19 @@
     align-items: center;
     background-color: var(--mainColor);
     color: var(--fontColor);
+}
+
+.logo {
+    width: 60%;
+}
+
+.logoText{
+    fill: var(--bulletColor);
+    font-size: calc(var(--base-size) * 1.5);
+}
+
+#curve {
+    fill: transparent;
 }
 .content {
     width: 80vw;
