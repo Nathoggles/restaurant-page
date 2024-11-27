@@ -23,7 +23,8 @@
 
 .logoText{
     fill: var(--bulletColor);
-    font-size: calc(var(--base-size) * 1.5);
+    font-size: 2.2rem;
+    font-weight: bold;
 }
 
 #curve {
