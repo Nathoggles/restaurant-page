@@ -1,0 +1,44 @@
+:root {
+    --mainColor: #ffe79a;
+    --secondColor: #ffa952;
+    --bulletColor:#ef5a5a;
+    --fontColor: #feffdf;
+}
+.allContainer {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--mainColor);
+    color: var(--fontColor);
+}
+.content {
+    width: 80vw;
+    height: 100vh;
+    background-image: url( 'shapeL.svg' );
+    background-position: 50% 10%;
+    background-size:  75%;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+button {
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.75vw;
+    border: none;
+    cursor: pointer;
+    color: var(--fontColor);
+    background-color: var(--secondColor);
+}
+
+button:hover {
+    background-color: var(--fontColor);
+    color: var(--secondColor);
+}
+button:active {
+    background-color: var(--bulletColor);
+    color: var(--fontColor);
+}
