@@ -2,6 +2,7 @@
     --mainColor: #ffe79a;
     --secondColor: #ffa952;
     --bulletColor:#ef5a5a;
+    --bulletDark: #b63939;
     --fontColor: #feffdf;
 
     font-family: "Caveat", "Handlee", system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
@@ -61,24 +62,21 @@ ul {
     transform: translate(-50%, -50%);
 }
 .content {
+    margin-top: 1rem;
     width: 80vw;
-    height: 70vh;
-    background-repeat: no-repeat;
+    height: 60vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     position: relative;
+
+    background-color: var(--bulletColor);
+    border: 0.5rem solid var(--bulletDark);
+
+    box-shadow: 2px 3px 10px 2px rgba(0,0,0,0.75);
 }
 
-.shape {
-    width: 80vw;
-    height: 100vh;
-    position: absolute;
-    top: 70%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
 
 .contentText {
     position: absolute;
