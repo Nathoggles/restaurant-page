@@ -16,13 +16,22 @@
 .content {
     width: 80vw;
     height: 100vh;
-    background-image: url( 'shapeL.svg' );
-    background-position: 50% 10%;
-    background-size:  75%;
     background-repeat: no-repeat;
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+#contentL{
+    background-image: url( 'shapeL.svg' );
+    background-position: 50% 10%;
+    background-size:  75%;
+}
+
+#contentS{
+    background-image: url( 'shapeS.svg' );
+    background-position: 50% 10%;
+    background-size:  50%;
 }
 
 button {
