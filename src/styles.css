@@ -1,5 +1,5 @@
 :root {
-    --mainColor: #ffe79a;
+    --mainBackground: #ffe79a;
     --secondColor: #ffa952;
     --bulletColor:#ef5a5a;
     --bulletDark: #b63939;
@@ -8,6 +8,19 @@
     font-family: "Caveat", "Handlee", system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
     --base-size: clamp(1rem, 1rem + 0.8vw, 3.2rem);
 }
+
+body.dimmed::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+  }
+
+
 .allContainer {
     height: 100vh;
     display: flex;
@@ -15,7 +28,7 @@
     justify-content: center;
     gap: 1%;
     align-items: center;
-    background-color: var(--mainColor);
+    background-color: var(--mainBackground);
     color: var(--fontColor);
 }
 
@@ -74,15 +87,33 @@ ul {
     border: 0.5rem solid var(--bulletDark);
 
     box-shadow: 2px 3px 10px 2px rgba(0,0,0,0.75);
+
+
 }
+
 
 .contentImage {
     float: left;
     width: max(100px, 40%);
-    margin: 1rem;
-    shape-outside: none;
-    
+    margin: 1rem;    
+    cursor: pointer;
+    padding: 0.15rem;
+    border: 0.2rem solid var(--bulletDark);
 }
+
+.contentImage.enlarged {
+    position: fixed; 
+    top: 50%;
+    left: 50%;
+    width: auto;
+    height: auto;
+    max-width: 85%; 
+    max-height: 85%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+  }
+
+
 .contentText {
     text-align: justify;
     /* font-size:  clamp(0.8rem, 2.1vw, 1.5rem);  */
@@ -92,6 +123,8 @@ ul {
 
 p {
     margin-bottom: 1rem;
+
+
 }
 
 #contentS{
@@ -100,7 +133,7 @@ p {
     background-size:  50%;
 }
 
-button {
+.navButton {
     padding: 0.45rem 0.45rem;
     aspect-ratio: 1;
     border-radius: 50%;
@@ -112,11 +145,11 @@ button {
     box-shadow: 1px 1px 5px 1px rgba(0,0,0,0.62);
 }
 
-button:hover {
+.navButton:hover {
     background-color: var(--fontColor);
     color: var(--secondColor);
 }
-button:active {
+.navButton:active {
     background-color: #ffc06e;
     color: var(--fontColor);
 }
