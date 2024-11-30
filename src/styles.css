@@ -68,6 +68,7 @@ ul {
     height: 60vh;
     padding: 1rem;
     position: relative;
+    overflow: auto;
 
     background-color: var(--bulletColor);
     border: 0.5rem solid var(--bulletDark);
@@ -77,14 +78,21 @@ ul {
 
 .contentImage {
     float: left;
-    width: 20rem;
+    width: max(100px, 40%);
     margin: 1rem;
+    shape-outside: none;
+    
 }
 .contentText {
     text-align: justify;
-    font-size: calc(var(--base-size) * 0.7);
+    /* font-size:  clamp(0.8rem, 2.1vw, 1.5rem);  */
+    font-size: calc(var(--base-size) * 0.76);
+
 }
 
+p {
+    margin-bottom: 1rem;
+}
 
 #contentS{
     background-image: url( 'shapeS.svg' );
