@@ -7,7 +7,7 @@
     --headlineColor: #f56440;
 
     font-family: "Caveat", "Handlee", system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-    --base-size: clamp(1rem, 1rem + 0.8vw, 3.2rem);
+    --base-size: clamp(1rem, 0.7rem + 1.2vw, 3.2rem);
 }
 
 body.dimmed::before {
@@ -93,14 +93,16 @@ ul {
 
 }
 
+
 .contentS {
-    margin: 0;
+    margin: 1rem;
     padding: 0.2rem;
-    height: 10vh;
+    height: fit-content;
+    overflow: visible;
     margin-bottom: 1rem;
     border: 0.2rem solid var(--bulletDark);
     box-shadow: 1px 1px 5px 1px rgba(0,0,0,0.75);
-    font-size: calc(var(--base-size) * 0.5);
+    font-size: calc(var(--base-size) * 0.4);
 }
 
 .contentS a {
@@ -176,64 +178,76 @@ p {
     color: var(--fontColor);
 }
 
-.upperContent{
-    display: flex;
-    height: 50%;
-    align-items: start;
-   
-    
+.aboutGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: end;
+    align-items: end;
+    height: 100%;
 }
 
-.upperContent img {
-    margin: 0;
-    flex: 0 0 auto;
-    width: max(100px, 35%);
-}
+
 
 .textAndSocials {
-    display: flex;
-    flex-direction: column;
-    margin-left: auto;
+margin: 1rem;
+align-self: center;
+justify-self: end;
+}
+
+
+.contentText.small{
+    margin: 0;
+    line-height: calc(var(--base-size) * 0.4);
 }
 
 .textAndSocials .contentText {
-    /* align-self: flex-end;
-    text-align: right; */
-    border: 1px white solid;
-    line-height: 1;
+    font-size: calc(var(--base-size) * 0.65);
+    text-align: right;
+
 }
-.textAndSocials .contentText p, .lowerContent .contentText p {
-    margin: 0.2rem;
+
+#address {
+    line-height: calc(var(--base-size) * 0.6);
+    justify-self: start;
+    align-self: center;
+    margin: 1rem;
 }
+
+.aboutGrid img {
+  width: max(100px, 65%);
+}
+
+.aboutGrid #outside {
+    justify-self: start;
+    align-self: start;
+    margin-top: 0;
+}
+.aboutGrid #address{
+    justify-self: start;
+}
+.aboutGrid #streetview{
+    margin-left: auto;
+    align-self: end;
+    justify-self: end;
+}
+
+
 .socials{
     display: flex;
     flex-direction: row;
-    align-items: start;
-    justify-content: flex-start;
+    justify-content: end;
      align-items: end;
     align-self: flex-end; 
     gap: 0.5rem;
     margin-top: 0.5rem;
 }
 .socialIcon {
-    max-width: 2.8rem;
+    max-width: 20%;
     cursor: pointer;
     padding: 0.5rem;
     padding: 0;
 }
 
-.lowerContent {
-    display: flex;
-}
 
-.lowerContent .contentText {
-    margin-right: auto;
-    width: 50%;
-    flex: 0 0 auto;
-    border: 1px white solid;
-}
-.lowerContent img {
-    width: max(100px, 75%);
-    margin: 0;
-   margin-left: auto;
-}
+
+
