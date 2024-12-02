@@ -83,6 +83,7 @@ ul {
     padding: 1rem;
     position: relative;
     overflow: auto;
+    scrollbar-color: var(--bulletDark) var(--secondColor);
 
     background-color: var(--bulletColor);
     border: 0.5rem solid var(--bulletDark);
@@ -92,6 +93,20 @@ ul {
 
 }
 
+.contentS {
+    margin: 0;
+    padding: 0.2rem;
+    height: 10vh;
+    margin-bottom: 1rem;
+    border: 0.2rem solid var(--bulletDark);
+    box-shadow: 1px 1px 5px 1px rgba(0,0,0,0.75);
+    font-size: calc(var(--base-size) * 0.5);
+}
+
+.contentS a {
+    text-decoration: none;
+    color: white;
+}
 
 .contentImage {
     float: left;
@@ -114,6 +129,14 @@ ul {
     z-index: 1000;
   }
 
+  .streetview
+  {
+    width: max(100px, 40%);
+    margin: 1rem;    
+    cursor: pointer;
+    padding: 0.175rem;
+    border: 0.2rem solid var(--bulletDark);
+  }
 
 .contentText {
     text-align: justify;
@@ -124,8 +147,6 @@ ul {
 
 p {
     margin-bottom: 1rem;
-
-
 }
 
 #contentS{
@@ -153,4 +174,66 @@ p {
 .navButton:active {
     background-color: #ffc06e;
     color: var(--fontColor);
+}
+
+.upperContent{
+    display: flex;
+    height: 50%;
+    align-items: start;
+   
+    
+}
+
+.upperContent img {
+    margin: 0;
+    flex: 0 0 auto;
+    width: max(100px, 35%);
+}
+
+.textAndSocials {
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+}
+
+.textAndSocials .contentText {
+    /* align-self: flex-end;
+    text-align: right; */
+    border: 1px white solid;
+    line-height: 1;
+}
+.textAndSocials .contentText p, .lowerContent .contentText p {
+    margin: 0.2rem;
+}
+.socials{
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+    justify-content: flex-start;
+     align-items: end;
+    align-self: flex-end; 
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+}
+.socialIcon {
+    max-width: 2.8rem;
+    cursor: pointer;
+    padding: 0.5rem;
+    padding: 0;
+}
+
+.lowerContent {
+    display: flex;
+}
+
+.lowerContent .contentText {
+    margin-right: auto;
+    width: 50%;
+    flex: 0 0 auto;
+    border: 1px white solid;
+}
+.lowerContent img {
+    width: max(100px, 75%);
+    margin: 0;
+   margin-left: auto;
 }
