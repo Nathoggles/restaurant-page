@@ -8,6 +8,8 @@
 
     font-family: "Caveat", "Handlee", system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
     --base-size: clamp(1rem, 0.7rem + 1.2vw, 3.2rem);
+    background-color: var(--mainBackground);
+    color: var(--fontColor);
 }
 
 body.dimmed::before {
@@ -29,8 +31,14 @@ body.dimmed::before {
     justify-content: center;
     gap: 1%;
     align-items: center;
-    background-color: var(--mainBackground);
-    color: var(--fontColor);
+    
+    overflow: hidden;
+
+}
+
+.content {
+    flex-grow: 1;
+    overflow-y: auto;
 }
 
 header {
@@ -39,8 +47,10 @@ header {
     justify-content: center;
     align-items: center;
     gap: 1%;
-    height: 30vh;
+    min-height: 30vh;
     width: 100%;
+
+
 }
 
 ul {
@@ -76,7 +86,7 @@ ul {
     top: 50%;
     transform: translate(-50%, -50%);
 }
-.content {
+.contentL, .contentS{
     margin-top: 1.5rem;
     width: clamp(300px, 80vw, 95vh);
     height: 60vh;
@@ -151,11 +161,6 @@ p {
     margin-bottom: 1rem;
 }
 
-#contentS{
-    background-image: url( 'shapeS.svg' );
-    background-position: 50% 10%;
-    background-size:  50%;
-}
 
 .navButton {
     padding: 0.45rem 0.45rem;
@@ -178,6 +183,67 @@ p {
     color: var(--fontColor);
 }
 
+
+
+.menuGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+    grid-template-rows: repeat(2, 1fr);
+    justify-items: center;
+    align-items: center; 
+    height: auto;
+    width: 90vw;
+    margin: 1.5rem;
+}
+
+.imageCard {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+
+    align-self: center;
+    justify-self: center;
+    margin: 0rem 2rem;
+}
+
+
+
+
+
+.imageCard img {
+    border: 0.2rem solid var(--bulletColor);
+    width: 35%;
+}
+.imageCard img:first-child {
+    /* margin-right: auto;  */
+}
+
+.card{
+    background-image: url( 'shapeS.svg' );
+    background-repeat: no-repeat;
+    background-size: 100% 250%;
+    width: calc(var(--base-size) * 16);
+   height: calc(var(--base-size) * 5.5); 
+   background-position-y: 15%;
+   -webkit-filter: drop-shadow( 1px 1px 5px rgba(0, 0, 0, .7));
+  filter: drop-shadow( 1px 1px 5px rgba(0, 0, 0, .7))
+}
+
+@media screen and (max-width: 800px) {
+    .menuGrid {
+        width: 95vw;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        margin: 0;
+        padding: 0;
+    }
+    .imageCard img {
+        width: 100px;
+    }
+    .card {
+        width: 85vw;
+    }
+}
 .aboutGrid {
     display: grid;
     grid-template-columns: 1fr 1fr;
